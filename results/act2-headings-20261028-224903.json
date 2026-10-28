@@ -1,0 +1,1463 @@
+{
+  "run_name": "act2-headings",
+  "run_at_utc": "2026-10-28T21:49:03+00:00",
+  "config": {
+    "chunking": "headings",
+    "chunk_size_tokens": null,
+    "chunk_overlap_tokens": null,
+    "splitter": "MarkdownNodeParser (one chunk per heading section)",
+    "title_prefix": false,
+    "frontmatter": "stripped",
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "query_instruction": null,
+    "vector_store": "ChromaDB, in-memory, fresh collection",
+    "top_k": 5
+  },
+  "versions": {
+    "python": "3.12.16",
+    "llama-index-core": "0.14.25",
+    "llama-index-embeddings-huggingface": "0.8.0",
+    "llama-index-vector-stores-chroma": "0.6.0",
+    "chromadb": "1.5.9",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.15.0"
+  },
+  "corpus": {
+    "articles": 7,
+    "sha256_prefix": {
+      "failed-payments": "5ecbff8ff128",
+      "fee-explanations": "63c959f550dd",
+      "kyc-verification": "134d0dd30882",
+      "plan-refunds": "5031f522b864",
+      "restricted-account-review": "300178ccfa86",
+      "transaction-disputes": "26e2faeb2c23",
+      "two-factor-authentication": "6b8733b73c37"
+    },
+    "chunks": 38,
+    "chunks_spanning_multiple_sections": 0
+  },
+  "summary": {
+    "primary_and_alternates": {
+      "hit_rate@3": 0.909,
+      "hit_rate@5": 0.955,
+      "mrr@5": 0.739,
+      "mean_gold_share_of_first_hit": 1.0,
+      "n": 22
+    },
+    "primary_only": {
+      "hit_rate@3": 0.773,
+      "hit_rate@5": 0.955,
+      "mrr@5": 0.564,
+      "n": 22
+    },
+    "strict_majority_gold": {
+      "hit_rate@3": 0.909,
+      "hit_rate@5": 0.955,
+      "mrr@5": 0.739,
+      "n": 22
+    },
+    "coverage_gaps_excluded": [
+      "Q14"
+    ]
+  },
+  "questions": [
+    {
+      "qid": "Q01",
+      "category": "transaction_disputes",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "I noticed a charge on my FinFlow account from a merchant I have never transacted with. What are the steps to file a dispute, and how long do I have to submit one?",
+      "gold_all": [
+        "transaction-disputes#3",
+        "transaction-disputes#1"
+      ],
+      "gold_primary": [
+        "transaction-disputes#3"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 5,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7726,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 2,
+          "score": 0.7052,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 3,
+          "score": 0.6723,
+          "sections": [
+            "transaction-disputes#2"
+          ],
+          "text": "## Can I dispute a transfer I sent to the wrong person?\n\nNo. A transfer you sent to the wrong person can't be disputed, because FinFlow can't force the recipient to return the money. Instead, a transfer sent to the wrong person is handled as a recall request, where FinFlow asks the recipient's bank to return the money. To start a recall request, email the support team with the transaction details and your account number. FinFlow will contact the recipient's bank, but the money only comes back if the recipient agrees to return it."
+        },
+        {
+          "rank": 4,
+          "score": 0.6305,
+          "sections": [
+            "fee-explanations#1"
+          ],
+          "text": "## What does FinFlow charge fees for?\n\nFinFlow charges fees on some payments but not others, and on paid plans. You may also see a fee described as a charge, a service charge, or money deducted from your balance. There are 4 types of payment, each with its own fee rule:\n\n1. Transfers to another FinFlow account are free.\n2. Transfers to a bank account carry a flat fee of $1.00.\n3. International transfers carry a 1.5% fee, plus a 0.5% exchange-rate margin.\n4. Card payments are free.\n\nIf you're on a paid plan, the plan is charged from your FinFlow balance at the start of each billing period, and the price is shown on the plan page."
+        },
+        {
+          "rank": 5,
+          "score": 0.624,
+          "sections": [
+            "transaction-disputes#3"
+          ],
+          "text": "## How do I dispute a charge?\n\nThere are 4 steps to dispute a charge in the app:\n\n1. Select the transaction you want to dispute.\n2. Choose the reason for the dispute.\n3. Add details or evidence, such as a screenshot or a description of what happened.\n4. Submit the dispute.\n\nYou can open a dispute up to 60 days after the transaction date."
+        }
+      ]
+    },
+    {
+      "qid": "Q03",
+      "category": "transaction_disputes",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "some1 charged me twice at the same shop, how do i disptue it?? its been 3 days",
+      "gold_all": [
+        "transaction-disputes#3",
+        "transaction-disputes#1"
+      ],
+      "gold_primary": [
+        "transaction-disputes#3"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6063,
+          "sections": [
+            "transaction-disputes#3"
+          ],
+          "text": "## How do I dispute a charge?\n\nThere are 4 steps to dispute a charge in the app:\n\n1. Select the transaction you want to dispute.\n2. Choose the reason for the dispute.\n3. Add details or evidence, such as a screenshot or a description of what happened.\n4. Submit the dispute.\n\nYou can open a dispute up to 60 days after the transaction date."
+        },
+        {
+          "rank": 2,
+          "score": 0.5794,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 3,
+          "score": 0.5134,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        },
+        {
+          "rank": 4,
+          "score": 0.4888,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 5,
+          "score": 0.487,
+          "sections": [
+            "fee-explanations#5"
+          ],
+          "text": "## Do I get my fee back if a payment fails or is reversed?\n\nYes. If a payment fails or is reversed, the fee for that payment is refunded in full to your balance. If a payment completes, the fee isn't refunded, even if you later ask the recipient to return the money. The refunded fee returns to your balance together with the payment, within 2-3 business days."
+        }
+      ]
+    },
+    {
+      "qid": "Q04",
+      "category": "transaction_disputes",
+      "register": "informal",
+      "question_type": "missing_context",
+      "question": "so did they approve it yet? been waiting all week",
+      "gold_all": [
+        "transaction-disputes#4"
+      ],
+      "gold_primary": [
+        "transaction-disputes#4"
+      ],
+      "is_gap": false,
+      "rank_all": 2,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.4955,
+          "sections": [
+            "kyc-verification#5"
+          ],
+          "text": "## How long does identity verification take?\n\nHow long identity verification takes depends on your tier. Tier 1 is usually checked automatically, which takes up to 24 hours. If an automatic check takes longer than 24 hours, it moves to manual review, which takes 1-3 business days. Tier 2 and Tier 3 usually go straight to manual review, which takes 1-3 business days. You'll be notified when your verification is approved or rejected. If you haven't heard back within 4 business days of submitting your documents, email the support team with your account number and the date you submitted your documents."
+        },
+        {
+          "rank": 2,
+          "score": 0.4951,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 3,
+          "score": 0.4908,
+          "sections": [
+            "kyc-verification#6"
+          ],
+          "text": "## Why was my identity verification rejected?\n\nWhen your identity verification is rejected, FinFlow shows you the reason. The most common reasons are a blurry photo, details that don't match your account, or an expired document. You can fix the problem and submit your documents again. If your documents are rejected 3 times within 24 hours, your case goes to manual review instead, which takes 1-3 business days. You'll be notified of the result when the manual review is complete."
+        },
+        {
+          "rank": 4,
+          "score": 0.4769,
+          "sections": [
+            "plan-refunds#3"
+          ],
+          "text": "## How long does a plan refund take, and where does it go?\n\nA plan refund takes 3-5 business days after your cancellation is confirmed. The refund always goes to your FinFlow balance, not to a card or another bank account. The refund is calculated and sent automatically, so you don't need to request it or contact anyone, and you'll get a notification when it arrives. If the refund hasn't reached your balance within 7 business days of your cancellation being confirmed, email the support team with your plan name, your cancellation date, and your account number."
+        },
+        {
+          "rank": 5,
+          "score": 0.4651,
+          "sections": [
+            "kyc-verification#1"
+          ],
+          "text": "## What can I do before my identity is verified?\n\nBefore you complete Tier 1 identity verification, you can log in and view your account, but you can't send payments. You may also see identity verification called KYC, an identity check, or account verification. Sending payments unlocks as soon as your Tier 1 verification is approved. Tier 1 needs one photo ID and a selfie, and it's usually checked automatically within 24 hours."
+        }
+      ]
+    },
+    {
+      "qid": "Q05",
+      "category": "transaction_disputes",
+      "register": "informal",
+      "question_type": "clear_cut*",
+      "question": "can i dispute a transfer i sent to the wrong person or is that different from a card charge",
+      "gold_all": [
+        "transaction-disputes#2"
+      ],
+      "gold_primary": [
+        "transaction-disputes#2"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7595,
+          "sections": [
+            "transaction-disputes#2"
+          ],
+          "text": "## Can I dispute a transfer I sent to the wrong person?\n\nNo. A transfer you sent to the wrong person can't be disputed, because FinFlow can't force the recipient to return the money. Instead, a transfer sent to the wrong person is handled as a recall request, where FinFlow asks the recipient's bank to return the money. To start a recall request, email the support team with the transaction details and your account number. FinFlow will contact the recipient's bank, but the money only comes back if the recipient agrees to return it."
+        },
+        {
+          "rank": 2,
+          "score": 0.5963,
+          "sections": [
+            "transaction-disputes#3"
+          ],
+          "text": "## How do I dispute a charge?\n\nThere are 4 steps to dispute a charge in the app:\n\n1. Select the transaction you want to dispute.\n2. Choose the reason for the dispute.\n3. Add details or evidence, such as a screenshot or a description of what happened.\n4. Submit the dispute.\n\nYou can open a dispute up to 60 days after the transaction date."
+        },
+        {
+          "rank": 3,
+          "score": 0.5896,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 4,
+          "score": 0.5462,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        },
+        {
+          "rank": 5,
+          "score": 0.5443,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        }
+      ]
+    },
+    {
+      "qid": "Q06",
+      "category": "failed_payments",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "My payment to a merchant failed with an \"insufficient funds\" error even though my balance was sufficient. What could cause this?",
+      "gold_all": [
+        "failed-payments#3"
+      ],
+      "gold_primary": [
+        "failed-payments#3"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7112,
+          "sections": [
+            "failed-payments#3"
+          ],
+          "text": "## Why does my payment say insufficient funds when my balance looks high enough?\n\nA payment can fail for insufficient funds even when your balance looks high enough, because pending transactions reserve money until they settle. Money reserved for a pending transaction still shows in your balance, but you can't spend it on another payment. Once the pending transaction settles, the reserved money is no longer counted, and your available amount updates. To avoid this failure, wait for pending transactions to settle before sending a payment that needs most of your balance."
+        },
+        {
+          "rank": 2,
+          "score": 0.7107,
+          "sections": [
+            "failed-payments#1"
+          ],
+          "text": "## Why did my payment fail?\n\nWhen a payment fails, FinFlow sends you a notification that names the reason. You may also see this described as a payment declined, a transaction failed, or money taken but the payment failed. There are 5 possible reasons:\n\n1. Funds: there wasn't enough available money in your balance.\n2. Limit: the payment would take you over your daily transfer limit.\n3. Merchant: the shop or merchant declined the payment.\n4. Network: a connection or processing problem stopped the payment.\n5. Restriction: your account is restricted, so you can't make transactions.\n\nIf you're not sure which reason applies, check the notification for the failed payment. It always names one of these 5 reasons. If you haven't completed Tier 1 identity verification yet, you can't send payments at all, so a payment is never attempted and you won't get a failure notification. Read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes."
+        },
+        {
+          "rank": 3,
+          "score": 0.6161,
+          "sections": [
+            "failed-payments#6"
+          ],
+          "text": "## Why did my payment fail because my account is restricted?\n\nA payment fails with the restriction reason when your account is restricted. A restricted account means you can log in and see your balance, but you can't make transactions. If a payment was in progress when the restriction was placed, that payment is reversed to your balance and stays frozen until the restriction is lifted. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 4,
+          "score": 0.598,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        },
+        {
+          "rank": 5,
+          "score": 0.5915,
+          "sections": [
+            "failed-payments#5"
+          ],
+          "text": "## Why did my payment fail because of a limit?\n\nA payment fails because of a limit when it would take you over your daily transfer limit. Your daily transfer limit depends on your identity verification tier. The daily limits are $500 for Tier 1, $2,000 for Tier 2, and $10,000 for Tier 3. The limit resets at midnight in your account's time zone, so you can try again after it resets. To raise your limit, complete the next verification tier. If you're already on Tier 3, you're at the highest limit, so wait for the reset or use another payment method. Read [Identity verification: documents, tiers, and review times] to see what each tier needs. It explains the accepted documents, what each tier requires, and how long verification takes."
+        }
+      ]
+    },
+    {
+      "qid": "Q08",
+      "category": "failed_payments",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "my paymnet keeps faling and the money left my acount, wat is hapening",
+      "gold_all": [
+        "failed-payments#2",
+        "failed-payments#1",
+        "failed-payments#4"
+      ],
+      "gold_primary": [
+        "failed-payments#2"
+      ],
+      "is_gap": false,
+      "rank_all": 3,
+      "rank_primary": 4,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5453,
+          "sections": [
+            "failed-payments#3"
+          ],
+          "text": "## Why does my payment say insufficient funds when my balance looks high enough?\n\nA payment can fail for insufficient funds even when your balance looks high enough, because pending transactions reserve money until they settle. Money reserved for a pending transaction still shows in your balance, but you can't spend it on another payment. Once the pending transaction settles, the reserved money is no longer counted, and your available amount updates. To avoid this failure, wait for pending transactions to settle before sending a payment that needs most of your balance."
+        },
+        {
+          "rank": 2,
+          "score": 0.502,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        },
+        {
+          "rank": 3,
+          "score": 0.5016,
+          "sections": [
+            "failed-payments#1"
+          ],
+          "text": "## Why did my payment fail?\n\nWhen a payment fails, FinFlow sends you a notification that names the reason. You may also see this described as a payment declined, a transaction failed, or money taken but the payment failed. There are 5 possible reasons:\n\n1. Funds: there wasn't enough available money in your balance.\n2. Limit: the payment would take you over your daily transfer limit.\n3. Merchant: the shop or merchant declined the payment.\n4. Network: a connection or processing problem stopped the payment.\n5. Restriction: your account is restricted, so you can't make transactions.\n\nIf you're not sure which reason applies, check the notification for the failed payment. It always names one of these 5 reasons. If you haven't completed Tier 1 identity verification yet, you can't send payments at all, so a payment is never attempted and you won't get a failure notification. Read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes."
+        },
+        {
+          "rank": 4,
+          "score": 0.4838,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        },
+        {
+          "rank": 5,
+          "score": 0.4801,
+          "sections": [
+            "fee-explanations#6"
+          ],
+          "text": "## Do I pay fees while my account is restricted?\n\nNo. While your account is restricted, you don't pay transaction fees, because you can't make transactions. Your paid plan stays active, but plan fees are not charged during the restriction. Billing resumes when the restriction is lifted, and you aren't charged for the paused period. If a payment was in progress when your account was restricted, that payment is reversed and its fee is refunded to your balance, where both stay frozen until the restriction is lifted. A restricted account means you can log in and see your balance, but you can't make transactions. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        }
+      ]
+    },
+    {
+      "qid": "Q09",
+      "category": "failed_payments",
+      "register": "informal",
+      "question_type": "missing_context",
+      "question": "why did it fail again? i already tried twice",
+      "gold_all": [
+        "failed-payments#1",
+        "failed-payments#4"
+      ],
+      "gold_primary": [
+        "failed-payments#1"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5845,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        },
+        {
+          "rank": 2,
+          "score": 0.5325,
+          "sections": [
+            "failed-payments#1"
+          ],
+          "text": "## Why did my payment fail?\n\nWhen a payment fails, FinFlow sends you a notification that names the reason. You may also see this described as a payment declined, a transaction failed, or money taken but the payment failed. There are 5 possible reasons:\n\n1. Funds: there wasn't enough available money in your balance.\n2. Limit: the payment would take you over your daily transfer limit.\n3. Merchant: the shop or merchant declined the payment.\n4. Network: a connection or processing problem stopped the payment.\n5. Restriction: your account is restricted, so you can't make transactions.\n\nIf you're not sure which reason applies, check the notification for the failed payment. It always names one of these 5 reasons. If you haven't completed Tier 1 identity verification yet, you can't send payments at all, so a payment is never attempted and you won't get a failure notification. Read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes."
+        },
+        {
+          "rank": 3,
+          "score": 0.4724,
+          "sections": [
+            "kyc-verification#6"
+          ],
+          "text": "## Why was my identity verification rejected?\n\nWhen your identity verification is rejected, FinFlow shows you the reason. The most common reasons are a blurry photo, details that don't match your account, or an expired document. You can fix the problem and submit your documents again. If your documents are rejected 3 times within 24 hours, your case goes to manual review instead, which takes 1-3 business days. You'll be notified of the result when the manual review is complete."
+        },
+        {
+          "rank": 4,
+          "score": 0.4683,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        },
+        {
+          "rank": 5,
+          "score": 0.4654,
+          "sections": [
+            "failed-payments#5"
+          ],
+          "text": "## Why did my payment fail because of a limit?\n\nA payment fails because of a limit when it would take you over your daily transfer limit. Your daily transfer limit depends on your identity verification tier. The daily limits are $500 for Tier 1, $2,000 for Tier 2, and $10,000 for Tier 3. The limit resets at midnight in your account's time zone, so you can try again after it resets. To raise your limit, complete the next verification tier. If you're already on Tier 3, you're at the highest limit, so wait for the reset or use another payment method. Read [Identity verification: documents, tiers, and review times] to see what each tier needs. It explains the accepted documents, what each tier requires, and how long verification takes."
+        }
+      ]
+    },
+    {
+      "qid": "Q10",
+      "category": "kyc_verification",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "Which documents does FinFlow accept for identity verification, and what are the file format requirements for uploading them?",
+      "gold_all": [
+        "kyc-verification#2"
+      ],
+      "gold_primary": [
+        "kyc-verification#2"
+      ],
+      "is_gap": false,
+      "rank_all": 3,
+      "rank_primary": 3,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6106,
+          "sections": [
+            "kyc-verification#4"
+          ],
+          "text": "## What are verification tiers and what does each one need?\n\nFinFlow has 3 verification tiers, and your daily transfer limit rises with each tier:\n\n1. Tier 1 needs a photo ID and a selfie.\n2. Tier 2 needs everything in Tier 1, plus proof of address: a utility bill or bank statement dated within the last 3 months.\n3. Tier 3 needs everything in Tier 2, plus proof of your source of funds: a payslip or bank statement showing where your money comes from.\n\nThe daily limits are $500 for Tier 1, $2,000 for Tier 2, and $10,000 for Tier 3. If a payment fails because it would go over your limit, completing the next tier raises your limit."
+        },
+        {
+          "rank": 2,
+          "score": 0.6025,
+          "sections": [
+            "kyc-verification#6"
+          ],
+          "text": "## Why was my identity verification rejected?\n\nWhen your identity verification is rejected, FinFlow shows you the reason. The most common reasons are a blurry photo, details that don't match your account, or an expired document. You can fix the problem and submit your documents again. If your documents are rejected 3 times within 24 hours, your case goes to manual review instead, which takes 1-3 business days. You'll be notified of the result when the manual review is complete."
+        },
+        {
+          "rank": 3,
+          "score": 0.5929,
+          "sections": [
+            "kyc-verification#2"
+          ],
+          "text": "## What documents do I need to verify my identity?\n\nTo complete Tier 1 identity verification, you need one photo ID and a selfie. The accepted photo IDs are a passport, a national ID card, or a driver's licence. The selfie is a liveness check, which confirms you're a real person matching the ID. You can upload your ID as a JPG, PNG, or PDF file, up to 10 MB."
+        },
+        {
+          "rank": 4,
+          "score": 0.5904,
+          "sections": [
+            "kyc-verification#7"
+          ],
+          "text": "## What happens if my account is restricted because of my identity documents or information?\n\nYour account can be restricted for 3 reasons linked to identity verification, and each one ends when you update what's missing. If your verification failed, submit your documents again. If your identity information is incomplete, add the missing information shown on your account banner. If your documents have expired, upload a current document. To submit documents, follow the 4 steps in \"How do I verify my identity?\" in this article: choose a document, upload it, take a selfie, and submit. After you submit, the restriction is lifted once your verification is approved, which takes up to 24 hours for an automatic check or 1-3 business days for a manual review. A restricted account means you can log in and see your balance, but you can't make transactions, and your money is safe until the restriction ends. To find out what else you can do during a restriction, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 5,
+          "score": 0.5404,
+          "sections": [
+            "two-factor-authentication#2"
+          ],
+          "text": "## What 2FA methods can I use?\n\nFinFlow offers 2 methods for getting a 2FA code:\n\n1. An authenticator app, which is the recommended method.\n2. SMS, where your code is sent by text message.\n\nYou also get 10 single-use backup codes when you set up 2FA. Backup codes aren't a method you choose. They're a fallback for when you can't use your authenticator app or SMS, for example if you lose your phone. Keep them somewhere safe. If you use all 10, you can generate new ones in Security after you log in."
+        }
+      ]
+    },
+    {
+      "qid": "Q11",
+      "category": "kyc_verification",
+      "register": "formal",
+      "question_type": "vague",
+      "question": "I am having difficulties with the verification process on my account and require assistance.",
+      "gold_all": [
+        "kyc-verification#6",
+        "kyc-verification#3",
+        "kyc-verification#5"
+      ],
+      "gold_primary": [
+        "kyc-verification#6"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6107,
+          "sections": [
+            "kyc-verification#6"
+          ],
+          "text": "## Why was my identity verification rejected?\n\nWhen your identity verification is rejected, FinFlow shows you the reason. The most common reasons are a blurry photo, details that don't match your account, or an expired document. You can fix the problem and submit your documents again. If your documents are rejected 3 times within 24 hours, your case goes to manual review instead, which takes 1-3 business days. You'll be notified of the result when the manual review is complete."
+        },
+        {
+          "rank": 2,
+          "score": 0.5754,
+          "sections": [
+            "kyc-verification#5"
+          ],
+          "text": "## How long does identity verification take?\n\nHow long identity verification takes depends on your tier. Tier 1 is usually checked automatically, which takes up to 24 hours. If an automatic check takes longer than 24 hours, it moves to manual review, which takes 1-3 business days. Tier 2 and Tier 3 usually go straight to manual review, which takes 1-3 business days. You'll be notified when your verification is approved or rejected. If you haven't heard back within 4 business days of submitting your documents, email the support team with your account number and the date you submitted your documents."
+        },
+        {
+          "rank": 3,
+          "score": 0.5653,
+          "sections": [
+            "kyc-verification#3"
+          ],
+          "text": "## How do I verify my identity?\n\nThere are 4 steps to verify your identity:\n\n1. Choose the document you want to use.\n2. Upload a photo or scan of the document.\n3. Take a selfie for the liveness check.\n4. Submit your verification.\n\nYou can start these steps in the app. If you can't log in, for example because you lost the phone you use for 2FA, start from the login screen by choosing \"Can't use your codes?\" instead.\n\nYou'll be notified when your verification is approved or rejected."
+        },
+        {
+          "rank": 4,
+          "score": 0.563,
+          "sections": [
+            "kyc-verification#7"
+          ],
+          "text": "## What happens if my account is restricted because of my identity documents or information?\n\nYour account can be restricted for 3 reasons linked to identity verification, and each one ends when you update what's missing. If your verification failed, submit your documents again. If your identity information is incomplete, add the missing information shown on your account banner. If your documents have expired, upload a current document. To submit documents, follow the 4 steps in \"How do I verify my identity?\" in this article: choose a document, upload it, take a selfie, and submit. After you submit, the restriction is lifted once your verification is approved, which takes up to 24 hours for an automatic check or 1-3 business days for a manual review. A restricted account means you can log in and see your balance, but you can't make transactions, and your money is safe until the restriction ends. To find out what else you can do during a restriction, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 5,
+          "score": 0.555,
+          "sections": [
+            "restricted-account-review#1"
+          ],
+          "text": "## Why is my account restricted and what do I do?\n\nFinFlow calls this state \"restricted.\" You may also see it described as \"suspended\" or \"banned.\" When your account is restricted, you can still log in and see your balance, but you can't make transactions.\n\nIf your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. That first contact tells you the next steps. It doesn't resolve the issue. How long resolution takes depends on the type of restriction.\n\nIf the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted.\n\nIf your reason isn't suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, check your account banner for the steps that end the restriction. If the banner asks for identity documents or information, read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes. For any other reason, follow the steps on your account banner. A full article on restrictions you can fix yourself is coming soon."
+        }
+      ]
+    },
+    {
+      "qid": "Q12",
+      "category": "kyc_verification",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "my kyc got rejcted agan, i uploded my pasport like u said",
+      "gold_all": [
+        "kyc-verification#6"
+      ],
+      "gold_primary": [
+        "kyc-verification#6"
+      ],
+      "is_gap": false,
+      "rank_all": null,
+      "rank_primary": null,
+      "first_hit_gold_share": null,
+      "strict_rank": null,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5216,
+          "sections": [
+            "transaction-disputes#2"
+          ],
+          "text": "## Can I dispute a transfer I sent to the wrong person?\n\nNo. A transfer you sent to the wrong person can't be disputed, because FinFlow can't force the recipient to return the money. Instead, a transfer sent to the wrong person is handled as a recall request, where FinFlow asks the recipient's bank to return the money. To start a recall request, email the support team with the transaction details and your account number. FinFlow will contact the recipient's bank, but the money only comes back if the recipient agrees to return it."
+        },
+        {
+          "rank": 2,
+          "score": 0.4966,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        },
+        {
+          "rank": 3,
+          "score": 0.4899,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        },
+        {
+          "rank": 4,
+          "score": 0.4837,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        },
+        {
+          "rank": 5,
+          "score": 0.4794,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        }
+      ]
+    },
+    {
+      "qid": "Q14",
+      "category": "refund_timelines",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "How long does a refund for a cancelled merchant purchase take to appear in my FinFlow balance?",
+      "gold_all": [
+        "plan-refunds#1"
+      ],
+      "gold_primary": [],
+      "is_gap": true,
+      "rank_all": 2,
+      "rank_primary": null,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7728,
+          "sections": [
+            "plan-refunds#3"
+          ],
+          "text": "## How long does a plan refund take, and where does it go?\n\nA plan refund takes 3-5 business days after your cancellation is confirmed. The refund always goes to your FinFlow balance, not to a card or another bank account. The refund is calculated and sent automatically, so you don't need to request it or contact anyone, and you'll get a notification when it arrives. If the refund hasn't reached your balance within 7 business days of your cancellation being confirmed, email the support team with your plan name, your cancellation date, and your account number."
+        },
+        {
+          "rank": 2,
+          "score": 0.7297,
+          "sections": [
+            "plan-refunds#1"
+          ],
+          "text": "## Do I get a refund when I cancel my FinFlow paid plan?\n\nYes. When you cancel a FinFlow paid plan or subscription, you get money back for the days you paid for but won't use. You may also see this called getting your money back, a cancellation refund, or a reimbursement. This article doesn't cover how to cancel a plan or refunds from shops and merchants. For a refund from a merchant, contact the merchant first, because the merchant decides whether and when to send it."
+        },
+        {
+          "rank": 3,
+          "score": 0.7194,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 4,
+          "score": 0.7,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        },
+        {
+          "rank": 5,
+          "score": 0.6925,
+          "sections": [
+            "plan-refunds#2"
+          ],
+          "text": "## How much will I get back when I cancel my plan?\n\nWhen you cancel your FinFlow plan, you get back the cost of the unused days in your billing period, counted from the date you cancel. There's no cancellation fee, so the refund is the full value of the days you won't use. For example, if you cancel with 10 days left in your billing period, you get back the cost of those 10 days."
+        }
+      ]
+    },
+    {
+      "qid": "Q15",
+      "category": "refund_timelines",
+      "register": "formal",
+      "question_type": "vague",
+      "question": "I was expecting a refund but I am unsure about its status. What should I understand about the process?",
+      "gold_all": [
+        "plan-refunds#3",
+        "plan-refunds#1"
+      ],
+      "gold_primary": [
+        "plan-refunds#3"
+      ],
+      "is_gap": false,
+      "rank_all": 2,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5994,
+          "sections": [
+            "fee-explanations#5"
+          ],
+          "text": "## Do I get my fee back if a payment fails or is reversed?\n\nYes. If a payment fails or is reversed, the fee for that payment is refunded in full to your balance. If a payment completes, the fee isn't refunded, even if you later ask the recipient to return the money. The refunded fee returns to your balance together with the payment, within 2-3 business days."
+        },
+        {
+          "rank": 2,
+          "score": 0.5937,
+          "sections": [
+            "plan-refunds#3"
+          ],
+          "text": "## How long does a plan refund take, and where does it go?\n\nA plan refund takes 3-5 business days after your cancellation is confirmed. The refund always goes to your FinFlow balance, not to a card or another bank account. The refund is calculated and sent automatically, so you don't need to request it or contact anyone, and you'll get a notification when it arrives. If the refund hasn't reached your balance within 7 business days of your cancellation being confirmed, email the support team with your plan name, your cancellation date, and your account number."
+        },
+        {
+          "rank": 3,
+          "score": 0.5732,
+          "sections": [
+            "restricted-account-review#3"
+          ],
+          "text": "## What happens to a payment that was in progress when my account was restricted?\n\nIf you had a payment in progress when the restriction was placed on your account, the payment is reversed back to your balance. The returned funds stay frozen with the rest of your balance until the restriction is lifted, and your money is safe in the meantime. The restriction is lifted once you complete the steps on your account banner or the support team finishes its review. A payment that had already completed before the restriction can't be reversed this way. You'll be notified when the reversed funds reach your balance. If you don't see your reversed payment in your balance within 2-3 business days, email the support team with the transaction details, your account number, and the date your account was restricted."
+        },
+        {
+          "rank": 4,
+          "score": 0.569,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 5,
+          "score": 0.5683,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        }
+      ]
+    },
+    {
+      "qid": "Q17",
+      "category": "refund_timelines",
+      "register": "informal",
+      "question_type": "missing_context",
+      "question": "will i get it back in full or is there a deduction?",
+      "gold_all": [
+        "plan-refunds#2"
+      ],
+      "gold_primary": [
+        "plan-refunds#2"
+      ],
+      "is_gap": false,
+      "rank_all": 3,
+      "rank_primary": 3,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 3,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.568,
+          "sections": [
+            "fee-explanations#5"
+          ],
+          "text": "## Do I get my fee back if a payment fails or is reversed?\n\nYes. If a payment fails or is reversed, the fee for that payment is refunded in full to your balance. If a payment completes, the fee isn't refunded, even if you later ask the recipient to return the money. The refunded fee returns to your balance together with the payment, within 2-3 business days."
+        },
+        {
+          "rank": 2,
+          "score": 0.5327,
+          "sections": [
+            "restricted-account-review#3"
+          ],
+          "text": "## What happens to a payment that was in progress when my account was restricted?\n\nIf you had a payment in progress when the restriction was placed on your account, the payment is reversed back to your balance. The returned funds stay frozen with the rest of your balance until the restriction is lifted, and your money is safe in the meantime. The restriction is lifted once you complete the steps on your account banner or the support team finishes its review. A payment that had already completed before the restriction can't be reversed this way. You'll be notified when the reversed funds reach your balance. If you don't see your reversed payment in your balance within 2-3 business days, email the support team with the transaction details, your account number, and the date your account was restricted."
+        },
+        {
+          "rank": 3,
+          "score": 0.5205,
+          "sections": [
+            "plan-refunds#2"
+          ],
+          "text": "## How much will I get back when I cancel my plan?\n\nWhen you cancel your FinFlow plan, you get back the cost of the unused days in your billing period, counted from the date you cancel. There's no cancellation fee, so the refund is the full value of the days you won't use. For example, if you cancel with 10 days left in your billing period, you get back the cost of those 10 days."
+        },
+        {
+          "rank": 4,
+          "score": 0.5139,
+          "sections": [
+            "transaction-disputes#4"
+          ],
+          "text": "## How long does a dispute take, and do I get my money back?\n\nA dispute takes 7-10 business days to review after you submit it. You don't get your money back while the dispute is being reviewed. If the dispute is upheld, the money returns to your FinFlow balance and you'll get a notification. If the dispute isn't upheld, the charge stays on your account and you'll get a notification explaining the decision. If you haven't received a decision within 10 business days of submitting your dispute, email the support team with the transaction details and your account number."
+        },
+        {
+          "rank": 5,
+          "score": 0.5109,
+          "sections": [
+            "plan-refunds#1"
+          ],
+          "text": "## Do I get a refund when I cancel my FinFlow paid plan?\n\nYes. When you cancel a FinFlow paid plan or subscription, you get money back for the days you paid for but won't use. You may also see this called getting your money back, a cancellation refund, or a reimbursement. This article doesn't cover how to cancel a plan or refunds from shops and merchants. For a refund from a merchant, contact the merchant first, because the merchant decides whether and when to send it."
+        }
+      ]
+    },
+    {
+      "qid": "Q18",
+      "category": "fee_explanations",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "What is the fee for an international transfer from a FinFlow personal account, and how is the exchange rate applied?",
+      "gold_all": [
+        "fee-explanations#3",
+        "fee-explanations#1"
+      ],
+      "gold_primary": [
+        "fee-explanations#3"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7699,
+          "sections": [
+            "fee-explanations#3"
+          ],
+          "text": "## How is the exchange rate worked out on an international transfer?\n\nOn an international transfer, FinFlow converts your money at the market exchange rate plus a margin of 0.5%. The margin means you get slightly less of the other currency than the market rate alone would give you. The margin is separate from the 1.5% transfer fee, so an international transfer costs you both. For example, on a $100 international transfer, you pay a $1.50 fee, so $101.50 leaves your balance. The 0.5% margin means the recipient gets an amount worth about $0.50 less in the other currency than the market rate would give. The confirmation screen shows the fee and the final exchange rate before you send the transfer."
+        },
+        {
+          "rank": 2,
+          "score": 0.7057,
+          "sections": [
+            "fee-explanations#1"
+          ],
+          "text": "## What does FinFlow charge fees for?\n\nFinFlow charges fees on some payments but not others, and on paid plans. You may also see a fee described as a charge, a service charge, or money deducted from your balance. There are 4 types of payment, each with its own fee rule:\n\n1. Transfers to another FinFlow account are free.\n2. Transfers to a bank account carry a flat fee of $1.00.\n3. International transfers carry a 1.5% fee, plus a 0.5% exchange-rate margin.\n4. Card payments are free.\n\nIf you're on a paid plan, the plan is charged from your FinFlow balance at the start of each billing period, and the price is shown on the plan page."
+        },
+        {
+          "rank": 3,
+          "score": 0.5963,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        },
+        {
+          "rank": 4,
+          "score": 0.5616,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 5,
+          "score": 0.5594,
+          "sections": [
+            "kyc-verification#4"
+          ],
+          "text": "## What are verification tiers and what does each one need?\n\nFinFlow has 3 verification tiers, and your daily transfer limit rises with each tier:\n\n1. Tier 1 needs a photo ID and a selfie.\n2. Tier 2 needs everything in Tier 1, plus proof of address: a utility bill or bank statement dated within the last 3 months.\n3. Tier 3 needs everything in Tier 2, plus proof of your source of funds: a payslip or bank statement showing where your money comes from.\n\nThe daily limits are $500 for Tier 1, $2,000 for Tier 2, and $10,000 for Tier 3. If a payment fails because it would go over your limit, completing the next tier raises your limit."
+        }
+      ]
+    },
+    {
+      "qid": "Q19",
+      "category": "fee_explanations",
+      "register": "formal",
+      "question_type": "vague",
+      "question": "I noticed the amount deducted from my account was different from what I expected. Could you clarify the charges?",
+      "gold_all": [
+        "fee-explanations#4",
+        "fee-explanations#1",
+        "fee-explanations#3"
+      ],
+      "gold_primary": [
+        "fee-explanations#4"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6503,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        },
+        {
+          "rank": 2,
+          "score": 0.5738,
+          "sections": [
+            "fee-explanations#6"
+          ],
+          "text": "## Do I pay fees while my account is restricted?\n\nNo. While your account is restricted, you don't pay transaction fees, because you can't make transactions. Your paid plan stays active, but plan fees are not charged during the restriction. Billing resumes when the restriction is lifted, and you aren't charged for the paused period. If a payment was in progress when your account was restricted, that payment is reversed and its fee is refunded to your balance, where both stay frozen until the restriction is lifted. A restricted account means you can log in and see your balance, but you can't make transactions. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 3,
+          "score": 0.5619,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 4,
+          "score": 0.5549,
+          "sections": [
+            "fee-explanations#1"
+          ],
+          "text": "## What does FinFlow charge fees for?\n\nFinFlow charges fees on some payments but not others, and on paid plans. You may also see a fee described as a charge, a service charge, or money deducted from your balance. There are 4 types of payment, each with its own fee rule:\n\n1. Transfers to another FinFlow account are free.\n2. Transfers to a bank account carry a flat fee of $1.00.\n3. International transfers carry a 1.5% fee, plus a 0.5% exchange-rate margin.\n4. Card payments are free.\n\nIf you're on a paid plan, the plan is charged from your FinFlow balance at the start of each billing period, and the price is shown on the plan page."
+        },
+        {
+          "rank": 5,
+          "score": 0.5451,
+          "sections": [
+            "restricted-account-review#3"
+          ],
+          "text": "## What happens to a payment that was in progress when my account was restricted?\n\nIf you had a payment in progress when the restriction was placed on your account, the payment is reversed back to your balance. The returned funds stay frozen with the rest of your balance until the restriction is lifted, and your money is safe in the meantime. The restriction is lifted once you complete the steps on your account banner or the support team finishes its review. A payment that had already completed before the restriction can't be reversed this way. You'll be notified when the reversed funds reach your balance. If you don't see your reversed payment in your balance within 2-3 business days, email the support team with the transaction details, your account number, and the date your account was restricted."
+        }
+      ]
+    },
+    {
+      "qid": "Q20",
+      "category": "fee_explanations",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "why was i charged a fee?? nobody told me abou this charge on my transfar",
+      "gold_all": [
+        "fee-explanations#1",
+        "fee-explanations#2",
+        "fee-explanations#4"
+      ],
+      "gold_primary": [
+        "fee-explanations#1"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5515,
+          "sections": [
+            "fee-explanations#2"
+          ],
+          "text": "## How do I know what fee I'll pay before I send money?\n\nYou see the fee on the confirmation screen before you send a payment. The confirmation screen shows the fee for that specific payment, so you can check it before you commit. If you don't want to pay the fee, you can cancel at the confirmation screen and nothing is charged."
+        },
+        {
+          "rank": 2,
+          "score": 0.5511,
+          "sections": [
+            "fee-explanations#1"
+          ],
+          "text": "## What does FinFlow charge fees for?\n\nFinFlow charges fees on some payments but not others, and on paid plans. You may also see a fee described as a charge, a service charge, or money deducted from your balance. There are 4 types of payment, each with its own fee rule:\n\n1. Transfers to another FinFlow account are free.\n2. Transfers to a bank account carry a flat fee of $1.00.\n3. International transfers carry a 1.5% fee, plus a 0.5% exchange-rate margin.\n4. Card payments are free.\n\nIf you're on a paid plan, the plan is charged from your FinFlow balance at the start of each billing period, and the price is shown on the plan page."
+        },
+        {
+          "rank": 3,
+          "score": 0.5455,
+          "sections": [
+            "transaction-disputes#1"
+          ],
+          "text": "## What can I dispute, and how long do I have?\n\nYou can dispute a charge on your FinFlow account that you don't recognize, or a charge that was taken more than once. You may also see this described as being charged twice, a double charge, or an unauthorized or fraudulent charge. You have 60 days from the transaction date to open a dispute. After 60 days, you can no longer dispute the charge through the app."
+        },
+        {
+          "rank": 4,
+          "score": 0.5411,
+          "sections": [
+            "transaction-disputes#3"
+          ],
+          "text": "## How do I dispute a charge?\n\nThere are 4 steps to dispute a charge in the app:\n\n1. Select the transaction you want to dispute.\n2. Choose the reason for the dispute.\n3. Add details or evidence, such as a screenshot or a description of what happened.\n4. Submit the dispute.\n\nYou can open a dispute up to 60 days after the transaction date."
+        },
+        {
+          "rank": 5,
+          "score": 0.5223,
+          "sections": [
+            "fee-explanations#4"
+          ],
+          "text": "## Why was more money taken from my balance than I sent?\n\nMore money is taken from your balance than you sent because the fee is charged on top of the amount you send. The fee is deducted from your balance as a separate line item. For example, if you send a bank transfer, the recipient gets the full amount you entered, and the flat fee of $1.00 appears as its own line in your transaction history. Transfers to other FinFlow accounts and card payments are free, so the amount taken matches the amount sent."
+        }
+      ]
+    },
+    {
+      "qid": "Q22",
+      "category": "account_suspension",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "My account was suspended after multiple failed login attempts. What is the process for having it reinstated?",
+      "gold_all": [
+        "two-factor-authentication#6"
+      ],
+      "gold_primary": [
+        "two-factor-authentication#6"
+      ],
+      "is_gap": false,
+      "rank_all": 2,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5404,
+          "sections": [
+            "failed-payments#4"
+          ],
+          "text": "## Should I try the payment again?\n\nDon't try the payment again while the money is still in transit, because sending it again can charge you twice. Money is in transit when the original payment shows as pending, or when a failed payment's reversal hasn't reached your balance yet. Once the original payment has failed and any reversed money is back in your balance, what to do next depends on the reason in the failure notification. If the reason is funds or limit, fix the cause and try again. If the reason is merchant, try again, use another payment method, or contact the merchant. If the reason is network, try again. If the reason is restriction, you can't retry until the restriction is lifted."
+        },
+        {
+          "rank": 2,
+          "score": 0.5382,
+          "sections": [
+            "two-factor-authentication#6"
+          ],
+          "text": "## Why am I locked out of my account?\n\nYou're locked out of your account after 5 failed login attempts, counting both wrong passwords and wrong 2FA codes. A lockout means you can't log in, but your money is safe and your account isn't closed. The lockout lasts 30 minutes, and after that you can try to log in again. A lockout is not the same as a restricted account. A restricted account means you can log in and see your balance but can't make transactions, while a lockout stops you logging in at all. If you can log in but can't make transactions, your account may be restricted. Read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 3,
+          "score": 0.5271,
+          "sections": [
+            "restricted-account-review#1"
+          ],
+          "text": "## Why is my account restricted and what do I do?\n\nFinFlow calls this state \"restricted.\" You may also see it described as \"suspended\" or \"banned.\" When your account is restricted, you can still log in and see your balance, but you can't make transactions.\n\nIf your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. That first contact tells you the next steps. It doesn't resolve the issue. How long resolution takes depends on the type of restriction.\n\nIf the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted.\n\nIf your reason isn't suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, check your account banner for the steps that end the restriction. If the banner asks for identity documents or information, read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes. For any other reason, follow the steps on your account banner. A full article on restrictions you can fix yourself is coming soon."
+        },
+        {
+          "rank": 4,
+          "score": 0.5221,
+          "sections": [
+            "restricted-account-review#3"
+          ],
+          "text": "## What happens to a payment that was in progress when my account was restricted?\n\nIf you had a payment in progress when the restriction was placed on your account, the payment is reversed back to your balance. The returned funds stay frozen with the rest of your balance until the restriction is lifted, and your money is safe in the meantime. The restriction is lifted once you complete the steps on your account banner or the support team finishes its review. A payment that had already completed before the restriction can't be reversed this way. You'll be notified when the reversed funds reach your balance. If you don't see your reversed payment in your balance within 2-3 business days, email the support team with the transaction details, your account number, and the date your account was restricted."
+        },
+        {
+          "rank": 5,
+          "score": 0.5213,
+          "sections": [
+            "restricted-account-review#2"
+          ],
+          "text": "## What can I do while my account is restricted?\n\nYou can log in and view your balance, but you can't make any transactions. If your account banner asks you to submit documents or information, complete that as your first step toward lifting the restriction. If your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. Your money is safe and will be available once the restriction is lifted. If the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted."
+        }
+      ]
+    },
+    {
+      "qid": "Q23",
+      "category": "account_suspension",
+      "register": "formal",
+      "question_type": "vague",
+      "question": "I am unable to access my account and it appears that some restriction has been applied. What does this mean?",
+      "gold_all": [
+        "restricted-account-review#1",
+        "two-factor-authentication#6"
+      ],
+      "gold_primary": [
+        "restricted-account-review#1"
+      ],
+      "is_gap": false,
+      "rank_all": 2,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 2,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6776,
+          "sections": [
+            "failed-payments#6"
+          ],
+          "text": "## Why did my payment fail because my account is restricted?\n\nA payment fails with the restriction reason when your account is restricted. A restricted account means you can log in and see your balance, but you can't make transactions. If a payment was in progress when the restriction was placed, that payment is reversed to your balance and stays frozen until the restriction is lifted. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 2,
+          "score": 0.6631,
+          "sections": [
+            "restricted-account-review#1"
+          ],
+          "text": "## Why is my account restricted and what do I do?\n\nFinFlow calls this state \"restricted.\" You may also see it described as \"suspended\" or \"banned.\" When your account is restricted, you can still log in and see your balance, but you can't make transactions.\n\nIf your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. That first contact tells you the next steps. It doesn't resolve the issue. How long resolution takes depends on the type of restriction.\n\nIf the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted.\n\nIf your reason isn't suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, check your account banner for the steps that end the restriction. If the banner asks for identity documents or information, read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes. For any other reason, follow the steps on your account banner. A full article on restrictions you can fix yourself is coming soon."
+        },
+        {
+          "rank": 3,
+          "score": 0.6484,
+          "sections": [
+            "restricted-account-review#2"
+          ],
+          "text": "## What can I do while my account is restricted?\n\nYou can log in and view your balance, but you can't make any transactions. If your account banner asks you to submit documents or information, complete that as your first step toward lifting the restriction. If your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. Your money is safe and will be available once the restriction is lifted. If the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted."
+        },
+        {
+          "rank": 4,
+          "score": 0.6295,
+          "sections": [
+            "kyc-verification#7"
+          ],
+          "text": "## What happens if my account is restricted because of my identity documents or information?\n\nYour account can be restricted for 3 reasons linked to identity verification, and each one ends when you update what's missing. If your verification failed, submit your documents again. If your identity information is incomplete, add the missing information shown on your account banner. If your documents have expired, upload a current document. To submit documents, follow the 4 steps in \"How do I verify my identity?\" in this article: choose a document, upload it, take a selfie, and submit. After you submit, the restriction is lifted once your verification is approved, which takes up to 24 hours for an automatic check or 1-3 business days for a manual review. A restricted account means you can log in and see your balance, but you can't make transactions, and your money is safe until the restriction ends. To find out what else you can do during a restriction, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 5,
+          "score": 0.6203,
+          "sections": [
+            "two-factor-authentication#6"
+          ],
+          "text": "## Why am I locked out of my account?\n\nYou're locked out of your account after 5 failed login attempts, counting both wrong passwords and wrong 2FA codes. A lockout means you can't log in, but your money is safe and your account isn't closed. The lockout lasts 30 minutes, and after that you can try to log in again. A lockout is not the same as a restricted account. A restricted account means you can log in and see your balance but can't make transactions, while a lockout stops you logging in at all. If you can log in but can't make transactions, your account may be restricted. Read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        }
+      ]
+    },
+    {
+      "qid": "Q24",
+      "category": "account_suspension",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "my acount got suspnded this morning and i dont even know why",
+      "gold_all": [
+        "restricted-account-review#1",
+        "restricted-account-review#2"
+      ],
+      "gold_primary": [
+        "restricted-account-review#1"
+      ],
+      "is_gap": false,
+      "rank_all": 4,
+      "rank_primary": 4,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 4,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.5065,
+          "sections": [
+            "failed-payments#1"
+          ],
+          "text": "## Why did my payment fail?\n\nWhen a payment fails, FinFlow sends you a notification that names the reason. You may also see this described as a payment declined, a transaction failed, or money taken but the payment failed. There are 5 possible reasons:\n\n1. Funds: there wasn't enough available money in your balance.\n2. Limit: the payment would take you over your daily transfer limit.\n3. Merchant: the shop or merchant declined the payment.\n4. Network: a connection or processing problem stopped the payment.\n5. Restriction: your account is restricted, so you can't make transactions.\n\nIf you're not sure which reason applies, check the notification for the failed payment. It always names one of these 5 reasons. If you haven't completed Tier 1 identity verification yet, you can't send payments at all, so a payment is never attempted and you won't get a failure notification. Read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes."
+        },
+        {
+          "rank": 2,
+          "score": 0.5044,
+          "sections": [
+            "failed-payments#6"
+          ],
+          "text": "## Why did my payment fail because my account is restricted?\n\nA payment fails with the restriction reason when your account is restricted. A restricted account means you can log in and see your balance, but you can't make transactions. If a payment was in progress when the restriction was placed, that payment is reversed to your balance and stays frozen until the restriction is lifted. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 3,
+          "score": 0.47,
+          "sections": [
+            "failed-payments#3"
+          ],
+          "text": "## Why does my payment say insufficient funds when my balance looks high enough?\n\nA payment can fail for insufficient funds even when your balance looks high enough, because pending transactions reserve money until they settle. Money reserved for a pending transaction still shows in your balance, but you can't spend it on another payment. Once the pending transaction settles, the reserved money is no longer counted, and your available amount updates. To avoid this failure, wait for pending transactions to settle before sending a payment that needs most of your balance."
+        },
+        {
+          "rank": 4,
+          "score": 0.4679,
+          "sections": [
+            "restricted-account-review#1"
+          ],
+          "text": "## Why is my account restricted and what do I do?\n\nFinFlow calls this state \"restricted.\" You may also see it described as \"suspended\" or \"banned.\" When your account is restricted, you can still log in and see your balance, but you can't make transactions.\n\nIf your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. That first contact tells you the next steps. It doesn't resolve the issue. How long resolution takes depends on the type of restriction.\n\nIf the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted.\n\nIf your reason isn't suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, check your account banner for the steps that end the restriction. If the banner asks for identity documents or information, read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes. For any other reason, follow the steps on your account banner. A full article on restrictions you can fix yourself is coming soon."
+        },
+        {
+          "rank": 5,
+          "score": 0.4642,
+          "sections": [
+            "failed-payments#5"
+          ],
+          "text": "## Why did my payment fail because of a limit?\n\nA payment fails because of a limit when it would take you over your daily transfer limit. Your daily transfer limit depends on your identity verification tier. The daily limits are $500 for Tier 1, $2,000 for Tier 2, and $10,000 for Tier 3. The limit resets at midnight in your account's time zone, so you can try again after it resets. To raise your limit, complete the next verification tier. If you're already on Tier 3, you're at the highest limit, so wait for the reset or use another payment method. Read [Identity verification: documents, tiers, and review times] to see what each tier needs. It explains the accepted documents, what each tier requires, and how long verification takes."
+        }
+      ]
+    },
+    {
+      "qid": "Q25",
+      "category": "account_suspension",
+      "register": "informal",
+      "question_type": "missing_context",
+      "question": "can i still get my money out?",
+      "gold_all": [
+        "restricted-account-review#2",
+        "restricted-account-review#4"
+      ],
+      "gold_primary": [
+        "restricted-account-review#2"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 3,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.543,
+          "sections": [
+            "restricted-account-review#4"
+          ],
+          "text": "## What happens to my money if my restriction can't be lifted?\n\nIf your account is restricted because of a confirmed sanctions match or a legal or regulatory hold, your funds stay frozen and are handled as the relevant authority, such as a court or regulator, instructs. In these cases, FinFlow can't promise a date when your money will be released, because the decision isn't FinFlow's to make. If suspected fraud is confirmed, or a terms-of-service violation is serious, FinFlow may keep the restriction in place or close the account. The support team tells you which, and what happens to your balance, when it contacts you. A restricted account means you can log in and see your balance, but you can't make transactions. The support team contacts you with next steps within 3-5 business days of the restriction. If the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted."
+        },
+        {
+          "rank": 2,
+          "score": 0.5324,
+          "sections": [
+            "plan-refunds#1"
+          ],
+          "text": "## Do I get a refund when I cancel my FinFlow paid plan?\n\nYes. When you cancel a FinFlow paid plan or subscription, you get money back for the days you paid for but won't use. You may also see this called getting your money back, a cancellation refund, or a reimbursement. This article doesn't cover how to cancel a plan or refunds from shops and merchants. For a refund from a merchant, contact the merchant first, because the merchant decides whether and when to send it."
+        },
+        {
+          "rank": 3,
+          "score": 0.5303,
+          "sections": [
+            "restricted-account-review#2"
+          ],
+          "text": "## What can I do while my account is restricted?\n\nYou can log in and view your balance, but you can't make any transactions. If your account banner asks you to submit documents or information, complete that as your first step toward lifting the restriction. If your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. Your money is safe and will be available once the restriction is lifted. If the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted."
+        },
+        {
+          "rank": 4,
+          "score": 0.5291,
+          "sections": [
+            "failed-payments#2"
+          ],
+          "text": "## Did I lose money when my payment failed?\n\nIt depends on whether the money left your balance. To check, open your transaction history. A failed payment shows as \"Failed,\" and a reversal appears as a separate credit line. If your balance dropped and no credit has appeared yet, the money is in transit. If the money never left your balance, nothing is lost and you don't need to do anything. If the money did leave your balance, the payment is reversed and the money returns to your balance within 2-3 business days, and you'll get a notification when it's back. If you don't see the reversed money in your balance within 2-3 business days, email the support team with the transaction details and your account number. If you paid a fee on the failed payment, the fee is refunded together with the payment. Read [Fees: what FinFlow charges for and when you get a fee back]. It explains which payments carry a fee, how much each fee is, and when a fee is refunded."
+        },
+        {
+          "rank": 5,
+          "score": 0.5243,
+          "sections": [
+            "restricted-account-review#3"
+          ],
+          "text": "## What happens to a payment that was in progress when my account was restricted?\n\nIf you had a payment in progress when the restriction was placed on your account, the payment is reversed back to your balance. The returned funds stay frozen with the rest of your balance until the restriction is lifted, and your money is safe in the meantime. The restriction is lifted once you complete the steps on your account banner or the support team finishes its review. A payment that had already completed before the restriction can't be reversed this way. You'll be notified when the reversed funds reach your balance. If you don't see your reversed payment in your balance within 2-3 business days, email the support team with the transaction details, your account number, and the date your account was restricted."
+        }
+      ]
+    },
+    {
+      "qid": "Q27",
+      "category": "two_factor_authentication",
+      "register": "formal",
+      "question_type": "clear_cut",
+      "question": "How do I set up two-factor authentication using an authenticator app instead of SMS codes?",
+      "gold_all": [
+        "two-factor-authentication#3",
+        "two-factor-authentication#2"
+      ],
+      "gold_primary": [
+        "two-factor-authentication#3"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 2,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.6281,
+          "sections": [
+            "two-factor-authentication#2"
+          ],
+          "text": "## What 2FA methods can I use?\n\nFinFlow offers 2 methods for getting a 2FA code:\n\n1. An authenticator app, which is the recommended method.\n2. SMS, where your code is sent by text message.\n\nYou also get 10 single-use backup codes when you set up 2FA. Backup codes aren't a method you choose. They're a fallback for when you can't use your authenticator app or SMS, for example if you lose your phone. Keep them somewhere safe. If you use all 10, you can generate new ones in Security after you log in."
+        },
+        {
+          "rank": 2,
+          "score": 0.6151,
+          "sections": [
+            "two-factor-authentication#3"
+          ],
+          "text": "## How do I set up or change my 2FA method?\n\nYou set up 2FA when you sign up for FinFlow. Later, you can change your method or view your setup in Security in the app. There are 4 steps to set up or change your 2FA method:\n\n1. Open Security in the app.\n2. Choose your 2FA method.\n3. Scan the QR code or enter the setup key in your authenticator app. For SMS, confirm your phone number instead.\n4. Enter the first code to confirm setup.\n\nWhen you finish setup, you get 10 single-use backup codes. Save them somewhere safe before you leave the screen."
+        },
+        {
+          "rank": 3,
+          "score": 0.5621,
+          "sections": [
+            "two-factor-authentication#4"
+          ],
+          "text": "## Why didn't my SMS code arrive?\n\nIf your SMS code doesn't arrive, first check that the phone number on your account is correct. SMS codes expire after 5 minutes. You can request a new code after 60 seconds, up to 3 times in 10 minutes. After the third request, you have to wait for the 10 minutes to pass before you can request another code. In the meantime, log in with your authenticator app or one of your 10 backup codes instead."
+        },
+        {
+          "rank": 4,
+          "score": 0.5369,
+          "sections": [
+            "two-factor-authentication#1"
+          ],
+          "text": "## Can I turn off two-factor authentication?\n\nNo. Two-factor authentication (2FA) is mandatory on every FinFlow account, so you can't turn it off. 2FA asks for a code as well as your password when you log in. You may also see it called two-step verification or a verification code."
+        },
+        {
+          "rank": 5,
+          "score": 0.5289,
+          "sections": [
+            "kyc-verification#3"
+          ],
+          "text": "## How do I verify my identity?\n\nThere are 4 steps to verify your identity:\n\n1. Choose the document you want to use.\n2. Upload a photo or scan of the document.\n3. Take a selfie for the liveness check.\n4. Submit your verification.\n\nYou can start these steps in the app. If you can't log in, for example because you lost the phone you use for 2FA, start from the login screen by choosing \"Can't use your codes?\" instead.\n\nYou'll be notified when your verification is approved or rejected."
+        }
+      ]
+    },
+    {
+      "qid": "Q28",
+      "category": "two_factor_authentication",
+      "register": "formal",
+      "question_type": "vague",
+      "question": "I am having trouble with the security code feature when logging in. Could you help?",
+      "gold_all": [
+        "two-factor-authentication#4",
+        "two-factor-authentication#5",
+        "two-factor-authentication#6"
+      ],
+      "gold_primary": [
+        "two-factor-authentication#4"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 5,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.484,
+          "sections": [
+            "two-factor-authentication#6"
+          ],
+          "text": "## Why am I locked out of my account?\n\nYou're locked out of your account after 5 failed login attempts, counting both wrong passwords and wrong 2FA codes. A lockout means you can't log in, but your money is safe and your account isn't closed. The lockout lasts 30 minutes, and after that you can try to log in again. A lockout is not the same as a restricted account. A restricted account means you can log in and see your balance but can't make transactions, while a lockout stops you logging in at all. If you can log in but can't make transactions, your account may be restricted. Read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 2,
+          "score": 0.4823,
+          "sections": [
+            "restricted-account-review#1"
+          ],
+          "text": "## Why is my account restricted and what do I do?\n\nFinFlow calls this state \"restricted.\" You may also see it described as \"suspended\" or \"banned.\" When your account is restricted, you can still log in and see your balance, but you can't make transactions.\n\nIf your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. That first contact tells you the next steps. It doesn't resolve the issue. How long resolution takes depends on the type of restriction.\n\nIf the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted.\n\nIf your reason isn't suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, check your account banner for the steps that end the restriction. If the banner asks for identity documents or information, read [Identity verification: documents, tiers, and review times]. It explains which documents to upload, how to submit them, and how long review takes. For any other reason, follow the steps on your account banner. A full article on restrictions you can fix yourself is coming soon."
+        },
+        {
+          "rank": 3,
+          "score": 0.4778,
+          "sections": [
+            "failed-payments#6"
+          ],
+          "text": "## Why did my payment fail because my account is restricted?\n\nA payment fails with the restriction reason when your account is restricted. A restricted account means you can log in and see your balance, but you can't make transactions. If a payment was in progress when the restriction was placed, that payment is reversed to your balance and stays frozen until the restriction is lifted. To find out why your account is restricted and how the restriction ends, read [Restricted account: what happens when FinFlow reviews your case]. It explains what a restriction means, what you can do in the meantime, and how long a review takes."
+        },
+        {
+          "rank": 4,
+          "score": 0.4703,
+          "sections": [
+            "restricted-account-review#2"
+          ],
+          "text": "## What can I do while my account is restricted?\n\nYou can log in and view your balance, but you can't make any transactions. If your account banner asks you to submit documents or information, complete that as your first step toward lifting the restriction. If your account is restricted because of suspected fraud, a sanctions check, a legal or regulatory hold, or a terms-of-service issue, our support team reviews these cases and contacts you with next steps within 3-5 business days. Your money is safe and will be available once the restriction is lifted. If the support team hasn't contacted you within 5 business days, email us with your account number and the date your account was restricted."
+        },
+        {
+          "rank": 5,
+          "score": 0.4676,
+          "sections": [
+            "two-factor-authentication#4"
+          ],
+          "text": "## Why didn't my SMS code arrive?\n\nIf your SMS code doesn't arrive, first check that the phone number on your account is correct. SMS codes expire after 5 minutes. You can request a new code after 60 seconds, up to 3 times in 10 minutes. After the third request, you have to wait for the 10 minutes to pass before you can request another code. In the meantime, log in with your authenticator app or one of your 10 backup codes instead."
+        }
+      ]
+    },
+    {
+      "qid": "Q29",
+      "category": "two_factor_authentication",
+      "register": "informal",
+      "question_type": "typos",
+      "question": "i lost my phone and cant get the 2fa code to login, wat do i do",
+      "gold_all": [
+        "two-factor-authentication#5",
+        "kyc-verification#3"
+      ],
+      "gold_primary": [
+        "two-factor-authentication#5"
+      ],
+      "is_gap": false,
+      "rank_all": 1,
+      "rank_primary": 1,
+      "first_hit_gold_share": 1.0,
+      "strict_rank": 1,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score": 0.7024,
+          "sections": [
+            "two-factor-authentication#5"
+          ],
+          "text": "## What do I do if I lost my phone?\n\nIf you lost your phone, log in with one of your 10 backup codes. Each backup code works only once. If you don't have a backup code, start from the login screen by choosing \"Can't use your codes?\" You don't need to be logged in. You then verify your identity in 4 steps: choose a document, upload it, take a selfie, and submit. Once your identity verification is approved, your 2FA is reset within 1-2 business days. If your 2FA hasn't been reset within 2 business days of your identity verification being approved, email the support team with your account number and the approval date. To see which documents you can use, read [Identity verification: documents, tiers, and review times]. It explains the accepted IDs, the selfie check, and how long verification takes."
+        },
+        {
+          "rank": 2,
+          "score": 0.6069,
+          "sections": [
+            "two-factor-authentication#2"
+          ],
+          "text": "## What 2FA methods can I use?\n\nFinFlow offers 2 methods for getting a 2FA code:\n\n1. An authenticator app, which is the recommended method.\n2. SMS, where your code is sent by text message.\n\nYou also get 10 single-use backup codes when you set up 2FA. Backup codes aren't a method you choose. They're a fallback for when you can't use your authenticator app or SMS, for example if you lose your phone. Keep them somewhere safe. If you use all 10, you can generate new ones in Security after you log in."
+        },
+        {
+          "rank": 3,
+          "score": 0.6066,
+          "sections": [
+            "kyc-verification#3"
+          ],
+          "text": "## How do I verify my identity?\n\nThere are 4 steps to verify your identity:\n\n1. Choose the document you want to use.\n2. Upload a photo or scan of the document.\n3. Take a selfie for the liveness check.\n4. Submit your verification.\n\nYou can start these steps in the app. If you can't log in, for example because you lost the phone you use for 2FA, start from the login screen by choosing \"Can't use your codes?\" instead.\n\nYou'll be notified when your verification is approved or rejected."
+        },
+        {
+          "rank": 4,
+          "score": 0.5557,
+          "sections": [
+            "two-factor-authentication#3"
+          ],
+          "text": "## How do I set up or change my 2FA method?\n\nYou set up 2FA when you sign up for FinFlow. Later, you can change your method or view your setup in Security in the app. There are 4 steps to set up or change your 2FA method:\n\n1. Open Security in the app.\n2. Choose your 2FA method.\n3. Scan the QR code or enter the setup key in your authenticator app. For SMS, confirm your phone number instead.\n4. Enter the first code to confirm setup.\n\nWhen you finish setup, you get 10 single-use backup codes. Save them somewhere safe before you leave the screen."
+        },
+        {
+          "rank": 5,
+          "score": 0.5201,
+          "sections": [
+            "two-factor-authentication#4"
+          ],
+          "text": "## Why didn't my SMS code arrive?\n\nIf your SMS code doesn't arrive, first check that the phone number on your account is correct. SMS codes expire after 5 minutes. You can request a new code after 60 seconds, up to 3 times in 10 minutes. After the third request, you have to wait for the 10 minutes to pass before you can request another code. In the meantime, log in with your authenticator app or one of your 10 backup codes instead."
+        }
+      ]
+    }
+  ]
+}
