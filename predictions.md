@@ -1,6 +1,6 @@
 # Predictions
 
-> **Not used for Act 1 (decision B9).** Act 1 ran without predictions, by choice. Use this template before the Act 2 rerun and again before unsealing the held-out set: fill it in, commit it, then run. Don't backfill Act 1.
+> **Not used for Act 1 or the first Act 2 change (decision B9).** Both ran without predictions. Use this template before the next Act 2 change and again before unsealing the held-out set: fill it in, commit it, then run. Don't backfill runs that already happened.
 
 Fill this in **before** running the baseline, then commit it, so the timestamp shows the predictions came first.
 
