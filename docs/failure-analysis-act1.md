@@ -1,4 +1,7 @@
-# Act 1 failure analysis
+# Failure analysis: baseline and Change 1
+
+> **Note:** this is the detailed working analysis. "Act 1" means the baseline and "Act 2" means Change 1 in the README. In the Change 1 section, the strict scores and the "100% relevant" figure are partly guaranteed by how they were measured (each chunk is exactly one section), so they overstate the gain. The README uses the fairer comparison.
+
 
 Run: `results/act1-20261028-220444` (corpus tag `kb-v1`). 256-token fixed chunks, no heading awareness, frontmatter stripped, `BAAI/bge-small-en-v1.5`, top 5.
 

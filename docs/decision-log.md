@@ -1,12 +1,9 @@
-# Decision Log: KB design session (cumulative, Oct 28, 2026)
+# Decision log
 
-Replaces `decision-log-additions.md`. Append to the existing `decision-log.md`, below the entries already there.
+Every design decision in the project, with the reason behind it and what would make me change it.
 
-**Format:** decision / reason / what would change my mind.
-**Owner:** **Ayo** = decided by Ayo. **Proposed** = decided by Claude on Ayo's delegation ("make all domain decisions, I'll document"). Accept or edit each Proposed entry.
-**NEEDS TRIGGER** = no "what would change my mind" line yet. Suggested lines are marked "Suggested" and are Ayo's to accept or replace.
-
-**Renumbering note:** the fees-article decisions earlier called F6-F10 are now **Fe6-Fe10**, to stop them clashing with the failed-payments rules. Failed-payments decisions are F1-F5 and F11-F18 (F6-F10 are intentionally unused).
+**Owner:** **Ayo** = decided by me. **Proposed** = drafted with AI, then reviewed and accepted by me.
+**NEEDS TRIGGER** = the "what would change my mind" line is still to be written.
 
 ---
 
@@ -195,6 +192,14 @@ Replaces `decision-log-additions.md`. Append to the existing `decision-log.md`, 
 | 2FA reset | 1-2 business days after verification approved | 2FA |
 | 2FA reset follow-up | 2 business days after approval | 2FA |
 | Backup codes | 10 single-use | 2FA |
+
+## M. Planned changes (decided, not built yet)
+
+| # | Decision | Reason | What would change my mind | Owner |
+|---|---|---|---|---|
+| P1 | When a question falls outside the knowledge base, or the AI isn't confident in what it retrieved, it hands the conversation to a human support agent, passing along the conversation so the customer doesn't repeat themselves. If the knowledge base already names a next step (for example "contact the merchant"), the AI gives that step and still offers a human. | Guessing on a support question costs trust and can cost the customer money. The baseline showed an out-of-scope question retrieving a confident-looking wrong match (plan refund timeline for a merchant refund question). | Handoff volume overwhelming support, or confidence scores proving unreliable. | Ayo |
+| P2 | Every handoff or low-confidence answer is logged for a technical writer: the question, what was retrieved, and why it wasn't enough. Repeated questions are grouped so the most common gaps surface first. The writer reviews the log and updates the knowledge base. | Turns unanswered questions into a content backlog, so the knowledge base improves from real demand. Kapa does a version of this: it labels answers "Uncertain" and teams filter them to find documentation gaps. | Log noise outweighing signal, or privacy limits on storing customer questions. | Ayo |
+| P3 | Questions are cleaned up before search: typos fixed and casual wording rewritten into the knowledge base's terms. | Typos sharply degrade meaning-based search (research shows retrieval scores more than halving on misspelled queries). The baseline showed "suspnded" missing the section built for "suspended." | Rewriting changing the meaning of questions it shouldn't touch. | Ayo |
 
 ## L. Open items and known gaps
 
